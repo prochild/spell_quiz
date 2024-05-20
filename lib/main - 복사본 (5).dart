@@ -2,11 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:spell_quiz/quiz_screen.dart';
 import 'package:spell_quiz/settings_screen.dart';
 import 'package:spell_quiz/fill_in_the_blanks_screen.dart';
-import 'local_storage.dart'; // 로컬 저장소 import
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await LocalStorage.init(); // 로컬 저장소 초기화
+void main() {
   runApp(MyApp());
 }
 
