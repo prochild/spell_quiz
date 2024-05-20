@@ -177,11 +177,11 @@ class _FillInTheBlanksScreenState extends State<FillInTheBlanksScreen> {
   double _getBlankRatio() {
     switch (_difficulty) {
       case 1:
-        return 0.3;
+        return 0.1;
       case 2:
-        return 0.5;
+        return 0.3;
       case 3:
-        return 0.7;
+        return 0.5;
       default:
         return 0.5;
     }
