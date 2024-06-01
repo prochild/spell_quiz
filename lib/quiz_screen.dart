@@ -43,7 +43,7 @@ class _QuizScreenState extends State<QuizScreen> {
     debugPrint("Words loaded: $_words");
     _stopwatch.start();
     _setOptions();
-    _speakWord(3);  // 초기 3번 단어 읽기
+
   }
 
   Future<void> _initializeTts() async {
@@ -52,6 +52,8 @@ class _QuizScreenState extends State<QuizScreen> {
       await _flutterTts.setLanguage("en-US");  // TTS 출력 언어 설정
       await _flutterTts.setSpeechRate(0.3); // TTS 속도 설정 (0.0 ~ 1.0)
       await _flutterTts.awaitSpeakCompletion(true); // 대기 설정
+      // TTS 초기화가 완료된 후 첫 단어를 읽음
+      _speakWord(3);  // 초기 3번 단어 읽기
     } else {
       _showTtsInstallDialog();
     }
